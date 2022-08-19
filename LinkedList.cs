@@ -27,6 +27,19 @@ namespace LinkedListGeneric
                 temp.next = node;
             }
         }
+
+        public void Append(T data)
+        {
+            Node<T> node = new Node<T>(data);
+            if (this.head == null)
+                this.head = node;
+            else
+            {
+                node.next = head;
+                this.head = node;
+            }
+            Console.WriteLine("{0} inserted into the linked list", node.data);
+        }
         public void Display()
         {
             Node<T> temp = this.head;
@@ -43,4 +56,4 @@ namespace LinkedListGeneric
         }
     }
 }
-}
+
