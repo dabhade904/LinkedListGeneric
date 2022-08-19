@@ -27,7 +27,20 @@ namespace LinkedListGeneric
                 temp.next = node;
             }
         }
-      
+        public void Display()
+        {
+            Node<T> temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("Linked is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data + " ");
+                temp = temp.next;
+            }
+        }
     }
 }
-
+}
