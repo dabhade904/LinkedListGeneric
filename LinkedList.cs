@@ -40,6 +40,15 @@ namespace LinkedListGeneric
             }
             Console.WriteLine("{0} inserted into the linked list", node.data);
         }
+
+        public Node<T> RemoveFirstNode()
+        {
+            if (this.head == null)
+                return null;
+            Node<T> firstElement = this.head;
+            this.head = this.head.next;
+            return firstElement;
+        }
         public void Display()
         {
             Node<T> temp = this.head;
