@@ -49,6 +49,23 @@ namespace LinkedListGeneric
             this.head = this.head.next;
             return firstElement;
         }
+
+        public Node<T> RemoveLastNode()
+        {
+            if (head == null)
+                return null;
+            if (head.next == null)
+                return null;
+            Node<T> newNode = head;
+
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            Node<T> lastElement = newNode.next;
+            newNode.next = null;
+            return lastElement;
+        }
         public void Display()
         {
             Node<T> temp = this.head;

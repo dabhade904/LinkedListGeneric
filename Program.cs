@@ -14,8 +14,12 @@ namespace LinkedListGeneric
             list.Display();
             list.Append(30);
             list.Display();
-            Console.WriteLine("After Deleted first Position");
+            Console.WriteLine("After Deleted first Node");
             list.RemoveFirstNode();
+            list.Display();
+
+            Console.WriteLine("After Deleted Last  Node");
+            list.RemoveLastNode();
             list.Display();
         }
     }
